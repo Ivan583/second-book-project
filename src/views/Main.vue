@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header :cartItemCount="cartItemCount" />
     <div v-for="product in sortedProducts" :key="product.id">
       <div class="row">
         <div class="col-md-4 col-md-offset-1">
@@ -49,7 +50,7 @@
 
 <script>
 // @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
+import Header from "@/components/Header.vue";
 
 export default {
   name: "Main",
@@ -61,7 +62,7 @@ export default {
   },
 
   components: {
-    // HelloWorld
+    Header
   },
 
   methods: {
